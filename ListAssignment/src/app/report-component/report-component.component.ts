@@ -11,6 +11,12 @@ export class ReportComponentComponent implements OnInit {
   constructor(private appService:SharedService) { }
 
   ngOnInit() {
+    if(this.appService.initialData){
+      //take already existing data if available
+      this.rawData = this.appService.initialData;
+      this.customFormat();      
+    }
+    else{
     this.appService.getRawData().subscribe(
       (data: any) => {
         this.rawData = data.data;
@@ -20,6 +26,7 @@ export class ReportComponentComponent implements OnInit {
         this.error=true;
       }
     )
+  }
   }
   customFormatWithFixedColumns() {
     //this can be used when there are only 3 categories

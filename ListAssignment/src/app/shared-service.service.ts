@@ -9,7 +9,11 @@ export class SharedService {
     }
 
     getRawData() {
-        return this.http.get("assets/data.json").map((res: any) => { return res.json() })
+        return this.http.get("assets/data.json").map((res: any) => {
+                let rData=res.json();
+                this.initialData=rData.data;
+                return this.initialData;
+            })
     }
 
     sortData(data: any, columnName, direction: string) {
@@ -49,4 +53,5 @@ export class SharedService {
         });
     }
 
+    initialData:Array<any>;
 }

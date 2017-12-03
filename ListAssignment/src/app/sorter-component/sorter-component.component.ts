@@ -15,7 +15,7 @@ export class SorterComponentComponent implements OnInit {
     
     this.service.getRawData()
     .subscribe(
-      data => {this.rawData = data.data},
+      data => {this.rawData = data},
       err=>{this.error=true}
     )
   }
