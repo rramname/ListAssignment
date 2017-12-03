@@ -30,7 +30,7 @@ export class ReportComponentComponent implements OnInit {
   }
   customFormatWithFixedColumns() {
     //this can be used when there are only 3 categories
-    this.customData=new Array<CustomDataModel>();
+   /* this.customData=new Array<CustomDataModel>();
     this.rawData.map((rd) => {
       if(this.customData.filter((ex)=>{return ex.name==rd.name}).length==0){
       let custom: CustomDataModel = new CustomDataModel();
@@ -58,19 +58,19 @@ export class ReportComponentComponent implements OnInit {
         if(leftVal.name>rightVal.name) return 1;
         return 0;
     })
-
+    */
   }
 
 
   customFormat() {
-    this.customData=[];
-    let tempCustomData=new Array<CustomDataModel>();
+    this.customData=new Array<any>();
+    let tempCustomData=new Array<any>();
     this.customFormatColumns=new Array<string>();
     this.customFormatColumns.push("name");
     this.rawData.map((rd) => {
       if(tempCustomData.filter((ex)=>{return ex.name==rd.name}).length==0){
-      let custom: CustomDataModel = new CustomDataModel();
-      custom.name = rd.name;
+      let custom:any = {};
+      custom["name"] = rd.name;
       let filtered: Array<any> = this.rawData.filter((rd2) => {
         return rd2.name == rd.name
       });
@@ -104,9 +104,9 @@ export class ReportComponentComponent implements OnInit {
   error:boolean=false;
 }
 
-class CustomDataModel {
-  name: string;
-  C1: string;
-  C2: string;
-  C3: string;
-}
+// class CustomDataModel {
+//   name: string;
+//   C1: string;
+//   C2: string;
+//   C3: string;
+// }
