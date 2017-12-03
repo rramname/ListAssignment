@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+.header{
+    background-color: navy;
+    color: white
+}
+table{
+    padding: 1%;
+    width:50%;
+    border: solid 1px black;
+}
+table th{
+    padding: 1%;
+    background: lightskyblue;
+    font-size: large
+}
+
+table td{
+    padding: 1%;
+    font-size: large
+}
+
+a{
+    font-size: large;
+}

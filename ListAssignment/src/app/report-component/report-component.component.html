@@ -1,0 +1,22 @@
+<div>
+  <h3>Aggregated Report
+    </h3>
+    <section>
+    <div>
+        <div *ngIf="error==true">
+            <span>Some error occured!!</span>
+        </div>
+    </div>
+    <table *ngIf="customData.length>0">
+        <tbody>
+          <th *ngFor="let colName of customFormatColumns">{{colName}}</th>
+        </tbody>
+        <tr *ngFor="let row of customData;let idx=index">
+          <td *ngFor="let colName of customFormatColumns">
+            {{row[colName]}}
+          </td>
+        </tr>
+    </table>
+</section>
+<a routerLink="/sorter">Go to sorter</a>
+</div>
