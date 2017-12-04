@@ -18,7 +18,7 @@ How I developed:
 
 How long it took?
 - To implement the requirements as is, it took about 1 hr 50 mins using angular CLI. Then I tried to enhance the second screen( requirement step 5) by making it independent of number of categories in initial data model which took about 20-25 mins.
-- I also added unite tests for the service (sorting logic) and second screen for the functionality which took about an hour
+- I also added unit tests for the service (sorting logic) and second screen for the functionality which took about an hour
 
 What was the most challenging?
 - Step 5 was challenging. It was also difficult to make it generic and make program work even if more object or categories are added or deleted.
